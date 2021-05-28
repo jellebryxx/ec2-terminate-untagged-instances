@@ -19,13 +19,7 @@ to_keep = []
 
 instances = relay.get(D.instances)
 for instance in instances:
-    try:
-        if instance['Tags.EnvID'] is None: 
-            to_terminate.append(instance['InstanceId'])
-        else:
-            to_keep.append(instance['InstanceId'])
-    except Exception as e:
-            print('\nEC2 instance {0} not considered for termination because of a processing error: {1}'.format(instance['InstanceId'], e))
+    print(instance)
 
 print('\nFound {} instances (with tags) to keep:'.format(len(to_keep)))
 print(*[instance_id for instance_id in to_keep], sep = "\n") 
