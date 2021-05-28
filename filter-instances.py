@@ -30,7 +30,7 @@ for instance in instances:
 print('\nFound {} instances (with tags) to keep:'.format(len(to_keep)))
 print(*[instance_id for instance_id in to_keep], sep = "\n") 
 
-print('\nFound {} instances without tags to stop:'.format(len(to_stop)))
-print(*[instance_id for instance_id in to_stop], sep = "\n") 
+print('\nFound {} instances without tags to stop:'.format(len(to_terminate)))
+print(*[instance_id for instance_id in to_terminate], sep = "\n") 
 
-relay.outputs.set('instanceIDs', to_stop)
+relay.outputs.set('instanceIDs', to_terminate)
