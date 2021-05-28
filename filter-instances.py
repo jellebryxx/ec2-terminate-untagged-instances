@@ -17,7 +17,7 @@ relay = Interface()
 to_stop = []
 to_keep = []
 
-instances = relay.get(D.instances))
+instances = relay.get(D.instances)
 for instance in instances:
     try:
         if instance['Tags.EnvID'] is None: 
