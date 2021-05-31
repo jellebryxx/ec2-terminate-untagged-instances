@@ -20,7 +20,7 @@ to_keep = []
 instances = filter(lambda i: i['State']['Name'] == 'running', relay.get(D.instances))
 for instance in instances:
     try:
-        if instance['Tags'].['EnvID'] is None: 
+        if instance['Tags']['EnvID'] is None: 
             to_stop.append(instance['InstanceId'])
         else:
             to_keep.append(instance['InstanceId'])
